@@ -1,4 +1,8 @@
+using Elpis.Business.Services;
+using Elpis.Business.Services.Interfaces;
 using Elpis.Data;
+using Elpis.Data.Repositories;
+using Elpis.Data.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -23,6 +27,15 @@ builder.Services.AddAuthentication()
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<ITypeOfMenusRepository, TypeOfMenusRepository>();
+builder.Services.AddScoped<ITypeOfMenusService, TypeOfMenusService>();
+
+builder.Services.AddScoped<IMenusRepository, MenusRepository>();
+builder.Services.AddScoped<IMenusService, MenusService>();
+
+builder.Services.AddScoped<IMenuItemsRepository, MenuItemsRepository>();
+builder.Services.AddScoped<IMenuItemsService, MenuItemsService>();
 
 builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.MaxDepth = 64);
 

@@ -14,7 +14,7 @@ namespace Elpis.Data.EntityConfigurations
 			builder.Property(mi => mi.Value).HasMaxLength(255);
 			builder.Property(mi => mi.Price).HasMaxLength(255);
 			builder.Property(mi => mi.Amount).HasMaxLength(255);
-			builder.Property(mi => mi.Information).HasMaxLength(255);
+			builder.Property(mi => mi.Information).HasMaxLength(500);
 
 			builder.HasOne(m => m.Menu)
 				.WithMany(mi => mi.MenuItems)
