@@ -17,9 +17,22 @@ body {
     background-color: #38608c;
 }
 
-#homeBtn{
-    margin-left: -960px;
+#registrationBtn, #loginBtn{
+    padding: 5px;
+    font-size: 20px;
+    margin-right: 10px;
 }
+
+#registrationBtn:hover {
+    border: 3px solid white;
+    font-size: 18px;
+}
+
+#loginBtn:hover {
+    border: 3px solid white;
+    font-size: 18px;
+}
+
 
 ::selection {
     color: #38608c;
